@@ -92,6 +92,10 @@ document.addEventListener(
   'DOMContentLoaded',
   () => {
     (refs.container.innerHTML = CreateMarkup(images))
-    const lightbox = new SimpleLightbox('.gallery .gallery-item .gallery-link')
+    const lightbox = new SimpleLightbox('.gallery .gallery-item .gallery-link', {
+      captionSelector: 'img',
+      captionsData: 'alt',
+      captionDelay: 250
+    })
   }
 );
