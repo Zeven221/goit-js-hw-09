@@ -11,6 +11,8 @@ refs.form.addEventListener('submit', e => {
     console.log(formData)
     refs.form.reset()
     localStorage.removeItem("feedback-form-state")
+    formData.email = ""
+    formData.message = ""
     return;
     }
     alert("Fill please all fields")
