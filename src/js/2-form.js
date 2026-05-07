@@ -9,6 +9,7 @@ refs.form.addEventListener('submit', e => {
     e.preventDefault()
     if(refs.form.elements.email.value.trim().length !== 0 && refs.form.elements.message.value.trim().length !== 0){
     console.log(formData)
+    refs.form.reset()
     localStorage.removeItem("feedback-form-state")
     return;
     }
